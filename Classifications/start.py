@@ -51,8 +51,6 @@ print("weights:", w3)
 print('Test MSE: ', mse3)
 print("")
 
-
-
 print("4 Sklearn Logistic Regression")
 reg4 = LogisticRegression()
 reg4.fit(X_train, y_train)

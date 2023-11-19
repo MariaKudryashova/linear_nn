@@ -1,8 +1,7 @@
 #реализация графа
 import Funcs as F
 
-class ComputationalGraph():
-    
+class ComputationalGraph():    
 
     def __init__(self, y, is_pr):
         super(ComputationalGraph, self).__init__()

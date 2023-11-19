@@ -76,12 +76,7 @@ class MyLogisticSGDRegression(object):
         return sigmoid(logit(X_, self.w))
 
     def _predict_proba_internal(self, X): 
-        """
-        Возможно, вы захотите использовать эту функцию вместо predict_proba, поскольку
-        predict_proba конкатенирует вход с вектором из единиц, что не всегда удобно
-        для внутренней логики вашей программы
-        """
-        
+                
         return sigmoid(logit(X, self.w))
 
     def predict(self, X, threshold=0.5):

@@ -1,0 +1,35 @@
+### For start.py
+
+1 My Logistic Regression
+weights: [ 0.13177667  2.94360477 -0.61968476]
+Test MSE:  0.01784362076888508
+
+2 My Logistic SGD Regression
+weights: [-0.05446087  3.22931672 -0.75467159]
+Test MSE:  0.01699338638647535
+
+3 My Elastic Logistic Regression
+weights: [-0.16932522  1.12993695 -0.31171897]
+Test MSE:  0.03278963182003116
+
+4 Sklearn Logistic Regression
+weights: [ 2.84230737 -0.53947668  0.08441375]
+Test MSE:  0.02
+
+5 KNeighborsClassifier
+Test MSE:  0.032
+
+-0.4
+0.6
+1.6
+2.6
+3.6
+4.6
+
+
+###For python find_better_params.py
+
+KNeighborsClassifier
+Test MSE:  0.02
+
+{'n_neighbors': 3, 'p': 2, 'weights': 'uniform'}

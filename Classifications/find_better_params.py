@@ -3,6 +3,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.datasets import make_blobs
 from sklearn.metrics import mean_squared_error, r2_score, accuracy_score
 from sklearn.model_selection import train_test_split
+import numpy as np
 
 X, y = make_blobs(n_samples=1000, centers=[[-2,0.5],[2,-0.5]], cluster_std=1, random_state=42)
 
@@ -22,13 +23,17 @@ params = {
     'weights': ['uniform', 'distance'],
     'p': [1, 2]
 }
-
-neigh_grid = GridSearchCV(neigh, params, cv=5, scoring='accuracy', n_jobs=-1)
+neigh_grid = GridSearchCV(reg, params, cv=5, scoring='accuracy', n_jobs=-1)
 # p = 1 Manhattan 
 # p = 2 Euclidean 
 
 # запустим поиск
-neigh_grid.fit(feature_matrix, labels)
+train_feature_matrix = X_train
+test_feature_matrix = X_test
+train_labels = y_train
+test_labels = y_test
+
+neigh_grid.fit(train_feature_matrix, train_labels)
 print(neigh_grid.best_params_)
 
 # создание модели с указанием гиперпараметра C

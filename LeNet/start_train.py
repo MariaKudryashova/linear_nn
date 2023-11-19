@@ -17,7 +17,7 @@ import Saver
 
 #CONSTANTS
 num_classes = 10 
-max_epochs = 10
+max_epochs = 5
 batch_size = 128
 is_break = False
 
@@ -40,4 +40,4 @@ model, criterion, optimizer, loader.loaders, False, is_break)
 print("accuracy: ", accuracy["valid"])
 
 #сохранение модели
-saver.Save(model, accuracy)
+Saver.SaveAll(model, accuracy)

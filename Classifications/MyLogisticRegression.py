@@ -10,11 +10,7 @@ class MyLogisticRegression(object):
     def __init__(self):
         self.w = None
     
-    def fit(self, X, y, max_iter=100, lr=0.1):
-        # Принимает на вход X, y и вычисляет веса по данной выборке.
-        # Множество допустимых классов: {1, -1}
-        # Не забудьте про фиктивный признак равный 1!
-        
+    def fit(self, X, y, max_iter=100, lr=0.1):        
         n, k = X.shape
         
         if self.w is None:
@@ -35,7 +31,6 @@ class MyLogisticRegression(object):
         return losses
         
     def predict_proba(self, X):
-        # Принимает на вход X и возвращает ответы модели
         n, k = X.shape
         X_ = np.concatenate((np.ones((n, 1)), X), axis=1)
         return sigmoid(logit(X_, self.w))

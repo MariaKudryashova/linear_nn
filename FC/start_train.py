@@ -21,7 +21,7 @@ is_break = False
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 loader = LoaderMnist.Loader(batch_size, (0.5), (0.5))
-saver = Saver.Saver("FC_ReLU_CE", "../Models")
+Saver = Saver.Saver("FC_ReLU_CE", "../Models")
 
 #Activation function
 activation = nn.ReLU()
@@ -46,6 +46,5 @@ model, criterion, optimizer, loader.loaders, True, is_break)
 
 print("accuracy: ", accuracy["valid"])
 
-saver.Save(model, accuracy)
+Saver.SaveAll(model, accuracy)
 
-#mlflow

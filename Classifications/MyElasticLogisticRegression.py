@@ -9,18 +9,7 @@ class MyElasticLogisticRegression(MyLogisticSGDRegression.MyLogisticSGDRegressio
     
     
     def get_grad(self, X_batch, y_batch, predictions):
-        """
-        Принимает на вход X_batch с уже добавленной колонкой единиц. 
-        Выдаёт градиент функции потерь в логистической регрессии с регуляризаторами
-        как сумму градиентов функции потерь на всех объектах батча + регуляризационное слагаемое
-        ВНИМАНИЕ! Нулевая координата вектора весов -- это BIAS, а не вес признака. 
-        Bias в регуляризационные слагаемые не входит. Также не нужно ДЕЛИТЬ ГРАДИЕНТ НА РАЗМЕР БАТЧА:
-        нас интересует не среднее, а сумма. 
-  
-        Выход -- вектор-столбец градиентов для каждого веса (np.array[n_features + 1])
-        """
-
-
+       
         grad_basic = np.dot(X_batch.T, (predictions - y_batch))
         #print("grad_basic", grad_basic)
         

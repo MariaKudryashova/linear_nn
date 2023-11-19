@@ -1,0 +1,36 @@
+### For start.py
+
+python start.py
+1 My Linear Regression
+weights: [5.23934851 8.90634517]
+Test MSE:  52.92023277630995
+
+2 Sklearn Linear Regression
+weights: [5.23934851 8.90634517]
+3 My Gradient Linear Regression
+weights: [5.26471845 7.69718771]
+Test MSE:  44.938876869689395
+
+4 My SGD Linear Regression
+weights: [5.11612374 7.4382463 ]
+Test MSE:  43.44783609003834
+
+5 MyRidgeRegression
+weights: [5.21497425 8.91022516]
+Test MSE:  52.92133558595917
+
+6 MySGDRidgeRegression
+weights: [4.56614656 7.02153648]
+Test MSE:  44.283916787750925
+
+7 MySGDLasso
+weights: [5.15217031 6.74086811]
+Test MSE:  40.48790280438382
+
+8 Sklearn Ridge
+weights: [5.21497425 8.91022516]
+Test MSE:  52.92133558595918
+
+9 Sklearn Lasso
+weights: [5.08311942 6.94323141]
+Test MSE:  41.253162280159714
